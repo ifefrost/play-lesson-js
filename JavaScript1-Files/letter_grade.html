@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Show letter grade</title>
+    <script>
+      "use strict";
+      //declare variables outside loop because global
+      let numberGrade;
+      let letterGrade;
+      //prompt loop
+      do {
+        numberGrade = parseFloat(
+          prompt(
+            "Enter number grade from 0 through 100\nOr enter 999 to end entries"
+          )
+        );
+        if (numberGrade > 100 && numberGrade != 999) {
+          letterGrade = "Invalid Entry"; //invalid entry above 100, except closing entry 999
+        } else if (numberGrade >= 88 && numberGrade <= 100) {
+          letterGrade = "A";
+        } else if (numberGrade >= 80 && numberGrade <= 87) {
+          letterGrade = "B";
+        } else if (numberGrade >= 68 && numberGrade <= 79) {
+          letterGrade = "C";
+        } else if (numberGrade >= 60 && numberGrade <= 67) {
+          letterGrade = "D";
+        } else if (numberGrade < 60) {
+          letterGrade = "F";
+        } else if (numberGrade == 999) {
+          alert("Closing Entries"); //closing alert and break loop
+          break;
+        }
+        alert(`Number grade =${numberGrade}\nLetter grade =${letterGrade}`);
+      } while (numberGrade !== 999); //exit loop when entry=999
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>This page is displayed after the JavaScript is executed</h1>
+    </main>
+  </body>
+</html>

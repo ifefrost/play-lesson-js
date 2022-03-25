@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Carousel application with animation</title>
+    <style>
+        #display_panel {
+            width: 100px;
+            overflow: hidden;
+            float: left;
+            height: 130px;
+            position: relative;
+        }
+
+        #image_list {
+            position: absolute;
+            left:0;
+            width: 600px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #image_list li {
+            float: left;
+            width: 100px;
+        }
+
+        #image_list li img {
+            width: 95px;
+        }
+
+        .button_panel {
+            float: left;
+            margin: 40px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>View our Books</h1>
+        <div id="carousel">
+            <div id="left_button" class="button_panel"> 
+                <img src="images/left.jpg" alt="">
+            </div>
+            <div id="display_panel">
+                <ul id="image_list">
+                    <li>
+                        <a href="newpage.html">
+                            <img src="images/book1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="newpage.html">
+                            <img src="images/book2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="newpage.html">
+                            <img src="images/book3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="newpage.html">
+                            <img src="images/book5.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="newpage.html">
+                            <img src="images/book6.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="newpage.html">
+                            <img src="images/book7.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="right_button" class="button_panel">
+                <img src="images/right.jpg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum of Numbers</title>
+    <script>
+      "use strict";
+      //declare outside loop because global variables
+      let number;
+      let answer;
+      do {
+        //first loop for ending the loop
+        do {
+          //loop for invalid entries
+          number = parseInt(
+            prompt("Enter any top number to sum from 1 through 100")
+          );
+
+          if (number >= 1 && number <= 100) {
+            continue; //if entry is valid move ahead
+          } else {
+            alert("Please enter a number between 1 and 100"); //invalid alert
+          }
+        } while (number < 1 || number > 100 || isNaN(number)); //if entry is less than, larger or not a number reloop
+
+        let total = 0; //init total to zero
+        for (let i = 1; i <= number; i++) {
+          total += i; //every number should be summed into total
+        }
+        alert(`The sum of the numbers from 1 through ${number} is ${total}`); //valid alert
+        answer = prompt("Do another sum?"); //closing alert
+      } while (answer == "y"); //closing value
+    </script>
+  </head>
+  <body>
+    <main>
+      <!-- Will show after JavaScript has run -->
+      <h1>Thanks for using the Sum of Numbers application!</h1>
+    </main>
+  </body>
+</html>

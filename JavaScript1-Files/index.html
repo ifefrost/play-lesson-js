@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum of Numbers</title>
+    <script>
+      let display_num = 0;
+      let new_num = 0;
+
+      do {
+        display_num = prompt(`Enter any top number to sum from 1 through 100`);
+
+        for (let i = 1; i <= display_num; i++) {
+          new_num += i;
+        }
+        alert(
+          "The sum of numbers from 1 through " + display_num + "is" + new_num
+        );
+        var option = prompt(`Do another sum(y/n)`);
+        if (option == "y") {
+          prompt(`Enter any top number to sum from 1 through 100`);
+        }
+      } while (option == "n");
+      {
+        exit;
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <!-- Will show after JavaScript has run -->
+      <h1>Thanks for using the Sum of Numbers application!</h1>
+    </main>
+  </body>
+</html>
